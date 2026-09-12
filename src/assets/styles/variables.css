@@ -1,0 +1,77 @@
+:root {
+  --background: #f5f7f6;
+  --background-elevated: #eef2ee;
+  --sidebar-background: #111113;
+  --sidebar-surface: rgba(255, 255, 255, 0.03);
+  --surface: #ffffff;
+  --surface-muted: #f4f5f4;
+  --surface-hover: rgba(255, 255, 255, 0.04);
+  --border: rgba(15, 15, 16, 0.09);
+  --border-strong: rgba(15, 15, 16, 0.14);
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --primary: #d8e7d8;
+  --primary-strong: #9cb89a;
+  --primary-text: #111827;
+  --danger: #dc5f5f;
+  --success: #2e8a65;
+  --warning: #d7a34a;
+  --shadow-soft: 0 12px 30px rgba(17, 24, 39, 0.06);
+  --shadow-panel: 0 20px 50px rgba(17, 24, 39, 0.08);
+  --radius-xl: 18px;
+  --radius-lg: 14px;
+  --radius-md: 10px;
+  --radius-sm: 8px;
+  --sidebar-width: 290px;
+  --content-max: 1240px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+:root[data-theme='dark'] {
+  --background: #0f0f10;
+  --background-elevated: #121417;
+  --sidebar-background: #111113;
+  --sidebar-surface: rgba(255, 255, 255, 0.02);
+  --surface: #18181b;
+  --surface-muted: #1d1d22;
+  --surface-hover: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.12);
+  --text-primary: #f5f5f5;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+  --primary: #dfeadf;
+  --primary-strong: #a4d2a4;
+  --primary-text: #0f0f10;
+  --danger: #f08080;
+  --success: #68d2a1;
+  --warning: #f0bb5d;
+  --shadow-soft: 0 10px 28px rgba(0, 0, 0, 0.28);
+  --shadow-panel: 0 18px 44px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-theme='light'] {
+  --background: #f5f7f6;
+  --background-elevated: #eef2ee;
+  --sidebar-background: #ffffff;
+  --sidebar-surface: #f8f9f8;
+  --surface: #ffffff;
+  --surface-muted: #f4f5f4;
+  --surface-hover: rgba(17, 24, 39, 0.03);
+  --border: rgba(15, 15, 16, 0.09);
+  --border-strong: rgba(15, 15, 16, 0.18);
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --primary: #d6e4d7;
+  --primary-strong: #8daf8d;
+  --primary-text: #111827;
+  --danger: #d96868;
+  --success: #308a63;
+  --warning: #cb8c2c;
+  --shadow-soft: 0 14px 30px rgba(17, 24, 39, 0.06);
+  --shadow-panel: 0 20px 50px rgba(17, 24, 39, 0.08);
+}
+
