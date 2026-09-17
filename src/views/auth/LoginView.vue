@@ -58,11 +58,13 @@ import { Input } from '../../components/ui/input';
 import { Label } from '../../components/ui/label';
 import { useAuthStore } from '../../stores/auth.store';
 import { useApiError } from '../../composables/useApiError';
+import { useToast } from '../../composables/useToast';
 const email = ref(''),
   password = ref(''),
   error = ref(''),
   router = useRouter(),
   auth = useAuthStore(),
+  toast = useToast(),
   apiError = useApiError();
 async function submit() {
   error.value = '';
@@ -70,7 +72,9 @@ async function submit() {
     await auth.login(email.value, password.value);
     router.push('/');
   } catch (e) {
-    error.value = apiError.message(e, 'Unable to sign in. Check your credentials.', { expiredMessage: null });
+    const message = apiError.message(e, 'Unable to sign in. Check your credentials.', { expiredMessage: null });
+    error.value = message;
+    toast.push(message, 'error');
   }
 }
 document.title = 'WG Vault — Sign in';

@@ -98,7 +98,9 @@ async function load() {
       .join('\n');
     dirty.value = false;
   } catch (e) {
-    error.value = apiError.message(e, 'Unable to load environment variables.');
+    const message = apiError.message(e, 'Unable to load environment variables.');
+    error.value = message;
+    toast.push(message, 'error');
   } finally {
     loading.value = false;
   }
@@ -119,7 +121,9 @@ async function save() {
     await load();
     emit('synced');
   } catch (e) {
-    error.value = apiError.message(e, 'Unable to sync environment variables. Check the editor format.');
+    const message = apiError.message(e, 'Unable to sync environment variables. Check the editor format.');
+    error.value = message;
+    toast.push(message, 'error');
   } finally {
     loading.value = false;
   }

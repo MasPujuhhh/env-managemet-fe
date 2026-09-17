@@ -192,9 +192,13 @@ async function revoke(k: ApiKey & { repositoryName: string }) {
     confirmLabel: 'Revoke',
   });
   if (!ok) return;
-  await apiKeyApi.revoke(r.id, k.id);
-  toast.push('API key revoked.', 'success');
-  load();
+  try {
+    await apiKeyApi.revoke(r.id, k.id);
+    toast.push('API key revoked.', 'success');
+    load();
+  } catch (e) {
+    toast.push(apiError.message(e, 'Unable to revoke API key.'), 'error');
+  }
 }
 
 async function copy() {
